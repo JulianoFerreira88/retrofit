@@ -1,5 +1,6 @@
 package com.github.retrofit;
 
+import com.github.retrofit.model.repository.EsandesmameRepository;
 import com.github.retrofit.model.repository.EsanmatrizRepository;
 import com.github.retrofit.model.repository.EsanracaRepository;
 import retrofit2.Retrofit;
@@ -16,12 +17,16 @@ public class Api {
                 .build();
     }
 
-    public EsanmatrizRepository getMatrizRepository() {
+    public EsanmatrizRepository getEsanmatrizRepository() {
         return retrofit.create(EsanmatrizRepository.class);
     }
 
     public EsanracaRepository getEsanracaRepository() {
         return retrofit.create(EsanracaRepository.class);
+    }
+
+    public EsandesmameRepository getEsandesmameRepository() {
+        return retrofit.create(EsandesmameRepository.class);
     }
 
 }
